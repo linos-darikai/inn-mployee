@@ -1,0 +1,17 @@
+.banner{
+    display: flex;
+    width: 1243px;
+    height: 238px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #172949; 
+    align-items:center;
+    justify-content: center;
+
+}
+.img-align{   
+    width: 200px;
+    height: 200px;
+    background:turquoise;
+
+}
