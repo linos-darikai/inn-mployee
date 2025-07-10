@@ -1,17 +1,24 @@
 .banner{
     display: flex;
-    width: 1243px;
-    height: 238px;
-    flex-shrink: 0;
-    border-radius: 30px;
+    width: 52vw;
+    height: 12vh;   
+    border-radius: 0px 0px 30px 30px;
     background: #172949; 
-    align-items:center;
+    align-items:start;
     justify-content: center;
+    margin-left: 24vw;
 
 }
 .img-align{   
     width: 200px;
     height: 200px;
-    background:turquoise;
+    margin-top: 12,5vh;
+  
 
+}
+.img{
+    width: 25,7vw;
+    height: 10vh;
+    flex-shrink: 0;    
+    aspect-ratio: 201/78;
 }
