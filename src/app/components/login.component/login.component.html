@@ -1,9 +1,12 @@
-
-
-<form [formGroup]="loginForm"> 
-       <p class="side-text">HR Onboarding</p>
-       <label class="side-text" for="email">Email</label>
-       <input id="email" formControlName="email" type="email">
-       <label class="side-text" for="password">Password</label>
-       <input id="password" formControlName="password" type="password">    
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 w-full sm:w-56">
+    <div class="input-field flex  gap-36  text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
+       <span class="pi pi-user"></span>
+       <input pInputText class="" type="text" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('username')" />
+    </div>
+    
+    <div class="input-field flex gap-1 text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
+       <span class="pi pi-lock"></span>
+       <input pInputText type="password" id="email" placeholder="Password" formControlName="password" [invalid]="isInvalid('email')" />
+    </div>
+    <button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
 </form>

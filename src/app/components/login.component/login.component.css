@@ -1,19 +1,18 @@
 
 
 .input-field{
-    display: flex;
-    width: 484px;
-    flex-direction: column;
-    align-items: flex-start;
-    color: var(--Gray-500, #717680);
+border-radius: 8px;
+border: 1px solid var(--Gray-300, #D5D7DA);
+background: var(--White, #FFF);
+width: 484px;
 
-    /*Put this in the Global Root for text and color*/
-    /* Text md/Regular */
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
+/* Shadow/xs */
+box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+display: flex;
+padding: 10px 14px;
+align-items: center;
+gap: 8px;
+align-self: stretch;
 }
 .side-text{
     width: 308px;
