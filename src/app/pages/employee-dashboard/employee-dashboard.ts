@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { SideNavBar } from '../../components/side-nav-bar/side-nav-bar';
 import { Countdown } from '../../components/countdown/countdown';
 import { employeeTest } from '../../tools/objects';
+import { EmployeeProgressChart } from '../../components/employee-progress-chart/employee-progress-chart';
+
 
 @Component({
   selector: 'app-employee-dashboard',
   standalone: true,
-  imports: [Countdown],
+  imports: [Countdown, EmployeeProgressChart],
   templateUrl: './employee-dashboard.html',
   styleUrl: './employee-dashboard.css'
 })
