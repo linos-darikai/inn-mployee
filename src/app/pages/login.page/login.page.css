@@ -1,5 +1,5 @@
-.login-layout{
+.login-page-layout{
     display: grid;
-    grid-template-columns: auto;
-    margin: 30vh;
+    grid-template-rows: 1fr 1fr;
+    
 }
