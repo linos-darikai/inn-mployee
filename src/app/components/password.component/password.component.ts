@@ -4,14 +4,14 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MessageModule } from 'primeng/message';
 
 @Component({
-  selector: 'app-password.component',
+  selector: 'app-password',
   imports: [ReactiveFormsModule, InputTextModule, MessageModule],
   templateUrl: './password.component.html',
   styleUrl: './password.component.css'
 })
 export class PasswordComponent {
 isInvalid(arg0: string) {
-throw new Error('Method not implemented.');
+return;
 }
 onSubmit() {
 throw new Error('Method not implemented.');
