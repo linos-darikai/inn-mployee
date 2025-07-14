@@ -1,16 +1,16 @@
 mat-sidenav-container {
   height: 100vh;
-  width: 30vh;
-  border-top-right-radius: 20;
-  border-bottom-right-radius: 20;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 mat-sidenav {
-  width: 100%;
+  width: 30vh;
   background-color: #172949;
   padding-top: 16px;
-  border-top-right-radius: 20;
-  border-bottom-right-radius: 20;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
