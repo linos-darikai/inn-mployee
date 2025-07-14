@@ -1,1 +1,8 @@
-<p>employee-progress-chart works!</p>
+<canvas baseChart
+  [type]="'doughnut'"
+  [datasets]="pieChartDatasets"
+  [labels]="pieChartLabels"
+  [options]="pieChartOptions"
+  [plugins]="pieChartPlugins"
+  [legend]="pieChartLegend">
+</canvas>

@@ -22,8 +22,19 @@ export class EmployeeProgressChart {
   INPROGRESS = 2;
   TODO = 4;
 
-    public pieChartOptions: ChartOptions<'doughnut'> = {
+
+    // Chart content
+  public pieChartOptions: ChartOptions<'doughnut'> = {
     responsive: false,
   };
+  public pieChartLabels = [ 'Done', 'In Progress', 'ToDo' ];
+  public pieChartDatasets = [ {
+    data: [ this.COMPLETED, this.INPROGRESS, this.TODO ]
+  } ];
+  public pieChartLegend = true;
+  public pieChartPlugins = [];
+
+  constructor() {
+  }
 
 }
