@@ -1,4 +1,6 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 w-full sm:w-56">
+
+<h2 class="head-text">HR Onboarding Platform</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-layout gap-4 w-full sm:w-56">
     <div class="input-field flex  gap-36  text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
        <span class="pi pi-user"></span>
        <input pInputText class="" type="text" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('username')" />
@@ -8,5 +10,10 @@
        <span class="pi pi-lock"></span>
        <input pInputText type="password" id="email" placeholder="Password" formControlName="password" [invalid]="isInvalid('email')" />
     </div>
-    <button pButton severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
+    <div class=login-buttons>
+      <button pButton class="loginB" severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
+      <button rButton class="resetB"  type="button"><span pButtonLabel>Reset Your Password</span></button>
+
+    </div>
+    
 </form>
