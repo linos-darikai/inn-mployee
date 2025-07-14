@@ -1,0 +1,5 @@
+.login-layout{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 30vh;
+}

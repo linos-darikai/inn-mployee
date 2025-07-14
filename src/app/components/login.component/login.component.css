@@ -1,0 +1,30 @@
+
+
+.input-field{
+border-radius: 8px;
+border: 1px solid var(--Gray-300, #D5D7DA);
+background: var(--White, #FFF);
+width: 484px;
+
+/* Shadow/xs */
+box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+display: flex;
+padding: 10px 14px;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+}
+.side-text{
+    width: 308px;
+    height: 19px;
+    flex-shrink: 0;
+    color: #000;
+
+    /*Must go Global CSS*/
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 75% */
+
+}
