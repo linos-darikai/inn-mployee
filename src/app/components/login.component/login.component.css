@@ -1,4 +1,23 @@
 
+/*Need for mobile optimisation*/
+.head-text{
+    display: flex;
+width: 40.2vw;
+height: 1vh;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 800;
+line-height: 20px; /* 31.25% */
+letter-spacing: 0.1px;
+margin-bottom: 30px ;
+margin-left: 30vw;
+}
 .login-layout{
     display: grid;
     grid-template-areas: 
@@ -30,7 +49,7 @@ margin-bottom: 10px;
     display: grid;
     grid-area: "buttons";
   
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "loginB resetB"; 
 }
 
 .loginB{
@@ -47,6 +66,7 @@ margin-bottom: 10px;
     font-weight: 500;
     line-height: var(--Static-Label-Large-Line-Height, 20px); /* 142.857% */
     letter-spacing: var(--Static-Label-Large-Tracking, 0.1px);
+    grid-area: "loginB";
 }
 .resetB{
    border-radius: 20px;
@@ -62,6 +82,7 @@ margin-bottom: 10px;
     font-weight: 500;
     line-height: var(--Static-Label-Large-Line-Height, 20px); /* 142.857% */
     letter-spacing: var(--Static-Label-Large-Tracking, 0.1px);
+    grid-area: "resetB";
 }
 
 
