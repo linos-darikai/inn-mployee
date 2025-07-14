@@ -1,0 +1,66 @@
+mat-sidenav-container {
+  height: 100vh;
+  width: 30vh;
+  border-top-right-radius: 20;
+  border-bottom-right-radius: 20;
+}
+
+mat-sidenav {
+  width: 100%;
+  background-color: #172949;
+  padding-top: 16px;
+  border-top-right-radius: 20;
+  border-bottom-right-radius: 20;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+mat-icon {
+  margin-right: 8px;
+}
+
+mat-nav-list {
+    background-color: #172949;
+}
+
+mat-list-item {
+    color: white;
+    background-color: #172949;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    align-items: center;
+    display: flex;
+}
+
+.active {
+  font-weight: bold;
+  color: white;
+}
+
+.nav-item-description {
+    color: white;
+}
+
+mat-icon {
+    color: white;
+    vertical-align: middle;
+}
+
+.logout {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+.logout button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d32f2f;
+}
