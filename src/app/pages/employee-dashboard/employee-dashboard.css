@@ -1,0 +1,29 @@
+.dashboard-wrapper {
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+}
+
+.title h1{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.countdown-wrapper span {
+    width: 20%;
+    text-align: right;
+    align-content: center;
+    padding: 0.5vh;
+}
+
+.countdown {
+    width: 80%;
+    padding: 0.5vh;
+}

@@ -1,0 +1,43 @@
+<div class="card-wrapper">
+    <div class="card-row" *ngIf="!deadlinePassed">
+        <div class="countdown-card">
+            <span [style.color]="currentColor">
+                {{days}}
+            </span>
+            <div class="text-holder">
+                 Days
+            </div>
+        </div>
+        <div class="countdown-card">
+            <span [style.color]="currentColor">
+                {{hours}} 
+            </span>
+            <div class="text-holder">
+                 Hours
+            </div>
+        </div>
+        <div class="countdown-card">
+            <span [style.color]="currentColor">
+                {{minutes}}
+            </span> 
+            <div class="text-holder">
+                 Minutes
+            </div>
+        </div>
+        <div class="countdown-card">
+            <span [style.color]="currentColor">
+                {{seconds}}
+            </span> 
+            <div class="text-holder">
+                 Seconds
+            </div>
+           
+        </div>
+    </div>
+    <div class="card-row" *ngIf="deadlinePassed">
+
+    </div>
+  
+
+
+</div>

@@ -4,12 +4,27 @@
 
     </div>
     <div class="title container">
-
+        <h1> Welcome {{user.name}}! </h1>
     </div>
-    <div class="countdown container">
-
+    <div class="countdown-wrapper container">
+        <span>
+            <h2>Deadline:</h2>
+        </span>
+        <div class="countdown">
+            <app-countdown></app-countdown>
+        </div>
+        
     </div>
     <div class="chart container">
+        <span>
+            <h2>
+                Pogress:
+            </h2>
+        </span>
+        <app-employee-progress-chart>
+            
+        </app-employee-progress-chart>
+
 
     </div>
     <div class="todo-list container">

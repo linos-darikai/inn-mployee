@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-side-nav-bar',
+  standalone: true,
   imports: [
         MatSidenavModule,
         CommonModule,
