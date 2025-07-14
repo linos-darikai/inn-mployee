@@ -7,5 +7,6 @@ import { ResetPasswordPage } from './pages/reset-password.page/reset-password.pa
 export const routes: Routes = [
     // TEMPORARILY CHANGED FROM LOGINPAGE TO EMPLOYEE DASHBOARD
     { path: '', component: DashboardLayout }, // To be changed back to LoginPage
-    { path: 'login', component: LoginPage}
+    { path: 'login', component: LoginPage},
+    { path: 'reset-password', component: ResetPasswordPage}
 ];  
