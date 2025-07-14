@@ -6,4 +6,5 @@ import { DashboardLayout } from './layouts/dashboard-layout/dashboard-layout';
 export const routes: Routes = [
     // TEMPORARILY CHANGED FROM LOGINPAGE TO EMPLOYEE DASHBOARD
     { path: '', component: DashboardLayout }, // To be changed back to LoginPage
-];
+    { path: 'login', component: LoginPage}
+];  
