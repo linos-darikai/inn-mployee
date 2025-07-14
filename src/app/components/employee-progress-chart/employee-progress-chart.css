@@ -1,0 +1,23 @@
+.progress-circle-wrapper {
+  position: relative;
+  width: 35vh;  /* adjust size */
+  height: 35vh;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+    padding: 2vh;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #2DBA95;
+  user-select: none;
+}
