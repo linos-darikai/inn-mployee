@@ -40,3 +40,17 @@
     width: 100%;
     padding: 0.5vh;
 }
+
+.continue {
+    background-color: transparent;
+    border-color: #2DBA95;
+    color: #2DBA95;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.coninue-container {
+    align-items: right;
+}
