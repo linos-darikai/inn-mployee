@@ -1,1 +1,26 @@
-<p>progress-tracker.component works!</p>
+<ng-container *ngTemplateOutlet="renderSteps; context: { $implicit: steps }"></ng-container>
+
+<ng-template #renderSteps let-stepsList>
+  <mat-stepper orientation="vertical">
+    <mat-step *ngFor="let step of stepsList" [stepControl]="step.formGroup">
+      <form *ngIf="step.formGroup" [formGroup]="step.formGroup">
+        <ng-template matStepLabel>{{ step.label }}</ng-template>
+
+        <mat-form-field *ngIf="step.inputName">
+          <mat-label>{{ step.inputLabel }}</mat-label>
+          <input matInput [formControlName]="step.inputName" [placeholder]="step.placeholder" />
+        </mat-form-field>
+
+        <ng-container *ngIf="step.subSteps?.length > 0">
+          <!-- Recursive rendering of nested steps -->
+          <ng-container *ngTemplateOutlet="renderSteps; context: { $implicit: step.subSteps }"></ng-container>
+        </ng-container>
+
+        <div>
+          <button matButton matStepperPrevious>Back</button>
+          <button matButton matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-stepper>
+</ng-template>
