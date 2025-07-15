@@ -10,7 +10,10 @@
     flex-direction: row;
     padding: 1vh;
 }
-
+.todo-list {
+    flex-direction: column;
+    align-items: center;
+}
 .chart {
     flex-direction: column;
     align-items: center;
@@ -21,14 +24,19 @@
     font-weight: bold;
 }
 
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 .countdown-wrapper span {
-    width: 20%;
-    text-align: right;
+    width: 100%;
+    text-align: center;
     align-content: center;
     padding: 0.5vh;
 }
 
 .countdown {
-    width: 80%;
+    width: 100%;
     padding: 0.5vh;
 }
