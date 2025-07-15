@@ -1,0 +1,16 @@
+.layout{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "tracker form";
+    grid-template-columns: 250px 1fr; /* left column fixed, right flexible */
+}
+.nav{
+    grid-area: nav;
+}
+.tracker{
+    grid-area: tracker;
+}
+.form{
+    grid-area: form;
+}
