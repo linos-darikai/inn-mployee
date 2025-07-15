@@ -17,6 +17,14 @@ export const employeeTest: User = {
     onboardingDeadline: new Date('2025-07-20T17:00:00')
 };
 
+export const adminTest: User = {
+    id: '1',
+    name: 'Phil Kazembe',
+    type: 'admin',
+    hireDate: new Date('2025-07-01T17:00:00'),
+    onboardingDeadline: new Date('2025-07-20T17:00:00')
+};
+
 
 // Create a list of tasks for each new user
 export interface Task {
