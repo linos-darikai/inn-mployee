@@ -33,10 +33,10 @@ mat-list-item {
     color: white;
     background-color: #172949;
     padding: 10px 20px;
-    font-size: 1.1rem;
     align-items: center;
     display: flex;
 }
+
 
 .active {
   font-weight: bold;
@@ -45,6 +45,7 @@ mat-list-item {
 
 .nav-item-description {
     color: white;
+    font-size: 90%;
 }
 
 mat-icon {
