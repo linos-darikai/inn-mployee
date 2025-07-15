@@ -23,8 +23,10 @@ export class EmployeeProgressChart {
     // Calculate progress
     let completedOrStarted = 0;
     for (let i = 0; i < this.tasks.length; i++) {
-      if (this.tasks[i].status === 'done' || this.tasks[i].status === 'started') {
+      if (this.tasks[i].status === 'done')  {
         completedOrStarted += 1;
+      } else if (this.tasks[i].status === 'started') {
+        completedOrStarted += 0.5;
       }
     }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { employeeTest } from '../../tools/objects';
 import { CommonModule } from '@angular/common';
 import { MatCardModule} from '@angular/material/card'
@@ -21,6 +21,8 @@ interval: any;
   hours: number = 0;
   minutes: number = 0;
   seconds: number = 0;
+
+constructor(private cdr: ChangeDetectorRef) {}
 
 ngOnInit(): void {
   this.startCountdown();
@@ -46,12 +48,14 @@ startCountdown() {
     this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if (this.days > 14) {
-      this.currentColor = this.COLORS[1];
+      this.currentColor = this.COLORS[0];
     } else if (this.days > 7) {
-      this.currentColor = this.COLORS[2];
+      this.currentColor = this.COLORS[1];
     } else {
-      this.currentColor = this.COLORS[3];
+      this.currentColor = this.COLORS[2];
     }
+
+    this.cdr.detectChanges();
   }, 1000)
 }
 
