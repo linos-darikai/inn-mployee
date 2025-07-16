@@ -1,3 +1,40 @@
 <div class="tracker">
+    <mat-stepper orientation="vertical">
+         <ng-template matStepperIcon="done">
+                ✅
+         </ng-template>
+        <mat-step>
+            <ng-template matStepLabel>Step 1</ng-template>
+            <ng-template matStepContent>
+            <p>Initial setup done here.</p>
+            </ng-template>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 2 (Has Sub-Steps)</ng-template>
+            <ng-template matStepContent>
+
+            <!-- 🔁 Nested Stepper -->
+            <mat-stepper orientation="vertical" linear>
+                <mat-step>
+                    <ng-template matStepLabel>inside</ng-template>        
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>inside</ng-template>                
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>Done</ng-template>
+                </mat-step>
+            </mat-stepper>
+            </ng-template>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 3</ng-template>
+            <p>Final review and submit</p>
+        </mat-step>
+    </mat-stepper>
 
 </div>

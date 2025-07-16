@@ -1,4 +1,28 @@
 .tracker{
     width: 20vw;
     height: 96vh;
+    background-color: aqua;
+}
+
+:host ::ng-deep .custom-stepper{
+    color: #000;
+
+/* Subheading */
+font-family: var(--sds-typography-subheading-font-family);
+font-size: var(--sds-typography-subheading-size-medium);
+font-style: normal;
+font-weight: var(--sds-typography-subheading-font-weight);
+line-height: 120%; /* 24px */
+}
+:host ::ng-deep .mat-step{
+    color: brown;
+}
+
+
+:host ::ng-deep .mat-step-icon{
+    background-color: #172949;
+    width: 14px;
+    height: 14px;
+    font-size: 0.8rem;
+    line-height: 40px; 
 }

@@ -1,18 +1,27 @@
 .nav{
-    height: 4vh;
+    display: grid;
+    height: 6vh;
     width: 100vw;
     border-bottom: 1px #D4CCCC solid;
+    grid-template-columns: 7vw auto;
 }
-
+.headline{
+    margin-top: 1.45vh;
+    color: #000;
+/* Heading */
+    font-family: var(--sds-typography-heading-font-family);
+    font-size: var(--sds-typography-heading-size-base);
+    font-style: normal;
+    font-weight: var(--sds-typography-heading-font-weight);
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.48px;
+    }
 .close{
-    margin-left: 2vw;
-    margin-top: 1vh;
-    color:#D4CCCC;
     font-size: 12px;
-    position: relative;
-    width: 2vw;   
 }
 .button-close{
+    margin-left: 2vw;
+    margin-top: 1vh;
     border-right: 1px #D4CCCC solid;
     width: 3vw;
 }
