@@ -1,40 +1,15 @@
 <div class="tracker">
-    <mat-stepper orientation="vertical">
-         <ng-template matStepperIcon="done">
-                ✅
-         </ng-template>
-        <mat-step>
-            <ng-template matStepLabel>Step 1</ng-template>
-            <ng-template matStepContent>
-            <p>Initial setup done here.</p>
-            </ng-template>
+    <mat-vertical-stepper class="custom-stepper" [linear]="false">
+        <mat-step *ngFor="let section of sections" [label]="section.label">
+            <!-- If there are subsections, show a nested stepper -->
+            <mat-vertical-stepper *ngIf="section.subsections" [linear]="false">
+            <mat-step *ngFor="let sub of section.subsections" [label]="sub.label">
+                <p>Subsection: {{ sub.label }}</p>
+            </mat-step>
+            </mat-vertical-stepper>
+
         </mat-step>
+    </mat-vertical-stepper>
 
-        <mat-step>
-            <ng-template matStepLabel>Step 2 (Has Sub-Steps)</ng-template>
-            <ng-template matStepContent>
-
-            <!-- 🔁 Nested Stepper -->
-            <mat-stepper orientation="vertical" linear>
-                <mat-step>
-                    <ng-template matStepLabel>inside</ng-template>        
-                </mat-step>
-
-                <mat-step>
-                    <ng-template matStepLabel>inside</ng-template>                
-                </mat-step>
-
-                <mat-step>
-                    <ng-template matStepLabel>Done</ng-template>
-                </mat-step>
-            </mat-stepper>
-            </ng-template>
-        </mat-step>
-
-        <mat-step>
-            <ng-template matStepLabel>Step 3</ng-template>
-            <p>Final review and submit</p>
-        </mat-step>
-    </mat-stepper>
-
+       
 </div>

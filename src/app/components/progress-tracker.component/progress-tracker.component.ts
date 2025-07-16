@@ -18,4 +18,26 @@ import { StepperSelectionEvent } from '@angular/cdk/stepper';
 
 })
 export class ProgressTrackerComponent {
+  
+  //**This is how sections should look like */
+  sections = [
+    {
+      label: 'Personal Info',
+      subsections: null,
+    },
+    {
+      label: 'Documents',
+      subsections: [
+        { label: 'ID Upload' },
+        { label: 'Proof of Address' }
+      ],
+    },
+    {
+      label: 'Assessments',
+      subsections: [
+        { label: 'Safety Training' },
+        { label: 'Company Policy Quiz' }
+      ],
+    }
+  ];
 }
