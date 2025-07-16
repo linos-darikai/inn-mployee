@@ -1,5 +1,5 @@
 <div class="card-wrapper">
-    <div class="card-row" *ngIf="!deadlinePassed">
+    <div class="card-row">
         <div class="countdown-card">
             <span [style.color]="currentColor">
                 {{days}}
@@ -35,9 +35,6 @@
         </div>
     </div>
     <div class="card-row" *ngIf="deadlinePassed">
-
+        <h1>DEADLINE HAS PASSED</h1>
     </div>
-  
-
-
 </div>

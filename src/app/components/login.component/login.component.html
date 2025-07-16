@@ -3,7 +3,7 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-layout gap-4 w-full sm:w-56">
     <div class="input-field flex  gap-36  text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
        <span class="pi pi-user"></span>
-       <input pInputText class="" type="text" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('username')" />
+       <input pInputText class="input-bar" type="text" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('username')" />
     </div>
     
     <div class="input-field flex gap-1 text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">

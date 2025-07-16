@@ -1,0 +1,24 @@
+<app-side-nav-bar>
+    <div class="dashboard-wrapper">
+        <div class="title-wrapper">
+            <span>
+                <h1> Welcome back, {{user.name}}!</h1>
+            </span>
+        </div>
+        <div >
+            <app-hr-summary-cards></app-hr-summary-cards>
+        </div>
+        <div class="activity-wrapper">
+            <div class="chart-wrapper">
+                <app-hr-chart></app-hr-chart>
+            </div>
+            <div class="edit-portal-wrapper">
+                <app-hr-edit-form></app-hr-edit-form>
+            </div>
+        </div>
+        <div class="activity-wrapper">
+            <app-hr-summary-table></app-hr-summary-table>
+        </div>
+
+    </div>
+</app-side-nav-bar>
