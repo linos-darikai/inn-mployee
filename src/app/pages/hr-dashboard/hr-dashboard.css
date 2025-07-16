@@ -1,0 +1,20 @@
+<<<<<<< Updated upstream
+=======
+app-hr-summary-cards {
+    width: 100%;
+}
+
+.chart-wrapper, .edit-portal-wrapper {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> Stashed changes

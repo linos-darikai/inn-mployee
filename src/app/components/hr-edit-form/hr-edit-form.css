@@ -1,0 +1,90 @@
+.title-wrapper {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1vh 0;
+  text-align: left;
+  padding-left: 1vh;
+  background-color: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 92%;/*47.5vh;*/
+    height: 28.13vh;
+    padding: 1vh;
+    background-color: #F9F9FA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 0 4px rgba(0.1, 0.1, 0.1, 0.1);
+    gap: 3vh;
+}
+.table-wrapper {
+display: flex;
+align-items: center;
+width: 100%;
+overflow: auto;
+border-radius: 8px;
+background-color: transparent;
+padding: 1vh;
+}
+
+/* Ensure the table stretches fully */
+.custom-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20.5vh;
+  border-spacing: 0;
+  overflow: auto;
+  padding-left: 2vw;
+  padding-bottom: 1vw;
+  align-items: left;
+  background-color: transparent;
+
+}
+
+/* Header and cell full width and height */
+.mat-mdc-header-cell,
+.mat-mdc-cell {
+    width: 100%;
+    padding: 1vh 2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.mat-mdc-cell {
+    border: none !important;
+}
+
+.mat-mdc-cell span {
+    font-size: 1.0rem;
+    padding: 0.38vh;
+}
+
+/* Align icon + text horizontally */
+.cell-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Optional: style the icon */
+.cell-content mat-icon {
+  color: #5cb797;
+  font-size: 20px;
+}
+
+/* Optional: sticky header styling */
+.mat-mdc-header-cell {
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  z-index: 2;
+}
+
+.mat-mdc-cell:hover {
+    border: black;
+}
