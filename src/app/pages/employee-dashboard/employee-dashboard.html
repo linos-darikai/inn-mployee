@@ -1,10 +1,15 @@
 <!-- Main Content will sit here-->
-<div class="dashboard-wrapper">
-    <div class="searchbar container">
-
-    </div>
-    <div class="title container">
-        <h1> Welcome {{user.name}}! </h1>
+ <app-side-nav-bar>
+    <div class="dashboard-wrapper">
+    
+    <div class="title-wrapper">
+        <span>
+            <h1> Welcome {{user.name}}! </h1>
+        </span>
+        <div class="searchbar-wrapper">
+            <app-searchbar></app-searchbar>
+        </div>
+        
     </div>
     <div class="countdown-wrapper container">
         <span>
@@ -41,4 +46,5 @@
     </div>
     
 
-</div>
+    </div>
+ </app-side-nav-bar>
