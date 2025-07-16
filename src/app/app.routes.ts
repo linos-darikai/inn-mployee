@@ -4,6 +4,7 @@ import { EmployeeDashboard } from './pages/employee-dashboard/employee-dashboard
 import { ResetPasswordPage } from './pages/reset-password.page/reset-password.page';
 import { PasswordPage } from './pages/password.page/password.page';
 import { HrDashboard } from './pages/hr-dashboard/hr-dashboard';
+import { FormTemplateLayout } from './layouts/form-template-layout/form-template-layout';
 
 export const routes: Routes = [
     // TEMPORARILY CHANGED FROM LOGINPAGE TO EMPLOYEE DASHBOARD
@@ -11,6 +12,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginPage},
     { path: 'reset-password', component: ResetPasswordPage},
     { path: 'password', component: PasswordPage},
-    { path: 'dashboard', component: EmployeeDashboard}
+    { path: 'dashboard', component: EmployeeDashboard},
+     { path: 'form', component: FormTemplateLayout}
 
 ];  

@@ -19,12 +19,14 @@ mat-table.custom-table {
 
 /* Remove lines and align text */
 .mat-mdc-row, .mat-mdc-cell {
+  background-color: white;
     padding: 3px;
     height: 3vh;
     border: none !important;
     text-align: center;
 }
 .mat-mdc-header-cell, .mat-mdc-header-row {
+  background-color: white;
     height: 3vh;
   font-weight: bold;
   position: sticky;

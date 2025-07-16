@@ -1,0 +1,42 @@
+.tracker{
+    width: 20vw;
+    height: 96vh;
+    background-color: #fff;
+}
+
+:host ::ng-deep .custom-stepper{
+    color: #000;
+    background-color: #fff;
+
+/* Subheading */
+font-family: var(--sds-typography-subheading-font-family);
+font-size: var(--sds-typography-subheading-size-medium);
+font-style: normal;
+font-weight: var(--sds-typography-subheading-font-weight);
+line-height: 120%; /* 24px */
+}
+
+
+:host ::ng-deep .mat-step{
+    color: brown;
+    background-color: #fff;
+
+/* Subheading */
+    font-family: var(--sds-typography-subheading-font-family);
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: var(--sds-typography-subheading-font-weight);
+    line-height: 120%; /* 24px */
+}
+
+
+
+
+:host ::ng-deep .mat-step-icon{
+    background-color: #172949;
+    width: 14px;
+    height: 14px;
+    font-size: 0.8rem;
+    line-height: 40px;
+    content: "@";
+}

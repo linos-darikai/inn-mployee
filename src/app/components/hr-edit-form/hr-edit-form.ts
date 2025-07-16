@@ -5,6 +5,10 @@ import { taskLists } from '../../tools/task-lists';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+<<<<<<< HEAD
+=======
+import { PrimeIcons } from 'primeng/api';
+>>>>>>> main
 @Component({
   selector: 'app-hr-edit-form',
   imports: [MatTableModule, CommonModule, MatSortModule, MatButtonModule, MatIconModule],
