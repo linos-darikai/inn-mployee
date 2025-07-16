@@ -1,5 +1,18 @@
 .nav{
     height: 4vh;
     width: 100vw;
-    background-color: bisque;
+    border-bottom: 1px #D4CCCC solid;
+}
+
+.close{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    color:#D4CCCC;
+    font-size: 12px;
+    position: relative;
+    width: 2vw;   
+}
+.button-close{
+    border-right: 1px #D4CCCC solid;
+    width: 3vw;
 }
