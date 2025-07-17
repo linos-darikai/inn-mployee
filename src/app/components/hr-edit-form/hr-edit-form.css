@@ -31,13 +31,8 @@ padding: 1vh;
 
 /* Ensure the table stretches fully */
 .custom-table {
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: column;
-=======
     display: flex;
     flex-direction: column;
->>>>>>> main
   width: 100%;
   height: 20.5vh;
   border-spacing: 0;
@@ -65,11 +60,7 @@ padding: 1vh;
 }
 
 .mat-mdc-cell span {
-<<<<<<< HEAD
-    font-size: 1.0rem;
-=======
     font-size: large;
->>>>>>> main
     padding: 0.38vh;
 }
 
@@ -95,9 +86,5 @@ padding: 1vh;
 }
 
 .mat-mdc-cell:hover {
-<<<<<<< HEAD
-    border: black;
-=======
     border: #ddd;
->>>>>>> main
 }
