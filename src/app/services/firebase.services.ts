@@ -41,6 +41,7 @@ export class FirebaseService {
   async createUser(email: string, password: string): Promise<boolean> {
     try {
         const cred = await createUserWithEmailAndPassword(this.auth, email, password);
+        this.syncUserProfile(cred.user);
         console.log('User created successfully :)');
         return true;
 

@@ -29,8 +29,8 @@ isInvalid(arg0: string) {
 }
 
 async onSubmit(): Promise<any> {
-  const userEmail = this.loginForm.get('email')?.value;
-  const userPassword = this.loginForm.get('password')?.value;
+  const userEmail = await this.loginForm.get('email')?.value;
+  const userPassword = await this.loginForm.get('password')?.value;
 
   if(!userEmail || !userPassword){
     this.notificationService.show('Please provide a valid email and password', 'error');
