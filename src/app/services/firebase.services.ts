@@ -5,7 +5,7 @@ import { getAuth, Auth, signInWithEmailAndPassword, signOut, User, UserProfile ,
 import { firebaseConfig } from '../../environments/firebase.config';
 import { getFirestore, Firestore, doc, setDoc, getDoc } from 'firebase/firestore';
 import { Users } from '../interfaces/users';
-
+import { NotificationService } from './notification.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,7 +14,9 @@ export class FirebaseService {
   auth: Auth;
   firestore: Firestore;
 
-  constructor() {
+  constructor(
+    private notificationService: NotificationService
+  ) {
     this.app = initializeApp(firebaseConfig);
     this.auth = getAuth(this.app);
     this.firestore = getFirestore(this.app);
@@ -24,6 +26,7 @@ export class FirebaseService {
     try {
         const cred = await signInWithEmailAndPassword(this.auth, email, password);
         console.log('Logged In successfully :)');
+        this.notificationService.show('Successful Log In!', 'success');
         return true;
 
     } catch(error: any) {
@@ -31,6 +34,7 @@ export class FirebaseService {
         const errorCode = error.code;
         console.log('Failied to Log In');
         console.error('Error signing in:', errorCode, errorMessage, 'Please try again later.');
+        this.notificationService.show( 'Failed to Log In right now, please try again.', 'error');
         return false;
     }
   } 

@@ -1,17 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LoginPage } from "./pages/login.page/login.page";
 import { FirebaseService } from './services/firebase.services';
+import { NotificationService } from './services/notification.service';
+import { MessageModule, Message } from 'primeng/message';
+import { Notification } from "./components/notification/notification.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MessageModule, Notification, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit{
   protected title = 'innbucks-onboarding';
-  constructor(private firebaseService: FirebaseService) {
+  showNotification = false;
+  notificationMessage = '';
+  notificationType = 'info';
+
+  constructor(
+    private firebaseService: FirebaseService,
+    private notificationService: NotificationService
+
+  ) {
     // Firebase app is initialized here once
+  }
+
+  ngOnInit() {
+    this.notificationService.message$.subscribe((data) => {
+      if (data) {
+        this.notificationMessage = data.message;
+        this.notificationType = data.type;
+        this.showNotification = true;
+      } else {
+        this.showNotification = false;
+      }
+    });
+
   }
 }
