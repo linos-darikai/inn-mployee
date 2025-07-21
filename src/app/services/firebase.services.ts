@@ -5,7 +5,8 @@ import { getAuth, Auth, signInWithEmailAndPassword, signOut, User, UserProfile ,
 import { firebaseConfig } from '../../environments/firebase.config';
 import { getFirestore, Firestore, doc, setDoc, getDoc } from 'firebase/firestore';
 import { Users } from '../interfaces/users';
-import { NotificationService } from './notification.service';
+import { AUTH_ERROR_MESSAGES } from './auth-errors';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -15,30 +16,26 @@ export class FirebaseService {
   firestore: Firestore;
 
   constructor(
-    private notificationService: NotificationService
   ) {
     this.app = initializeApp(firebaseConfig);
     this.auth = getAuth(this.app);
     this.firestore = getFirestore(this.app);
   }
 
-  async logIn(email: string, password: string): Promise<boolean> {
+  async logIn(email: string, password: string): Promise<boolean | string> {
     try {
         const cred = await signInWithEmailAndPassword(this.auth, email, password);
         console.log('Logged In successfully :)');
-        this.notificationService.show('Successful Log In!', 'success');
         return true;
 
     } catch(error: any) {
-        const errorMessage = error.message;
-        const errorCode = error.code;
-        console.log('Failied to Log In');
-        console.error('Error signing in:', errorCode, errorMessage, 'Please try again later.');
-        this.notificationService.show( 'Failed to Log In right now, please try again.', 'error');
-        return false;
+        const errorCode = String(error.code);
+        const errorMessage =  AUTH_ERROR_MESSAGES[errorCode] || AUTH_ERROR_MESSAGES['default'];
+        console.error('Error logging in:', errorCode, errorMessage, 'Please try again later.');
+        return errorMessage;
     }
   } 
-  async createUser(email: string, password: string): Promise<boolean> {
+  async createUser(email: string, password: string): Promise<boolean | string> {
     try {
         const cred = await createUserWithEmailAndPassword(this.auth, email, password);
         this.syncUserProfile(cred.user);
@@ -46,10 +43,10 @@ export class FirebaseService {
         return true;
 
     } catch(error: any) {
-        const errorMessage = error.message;
-        const errorCode = error.code;
+        const errorCode = String(error.code);
+        const errorMessage =  AUTH_ERROR_MESSAGES[errorCode] || AUTH_ERROR_MESSAGES['default'];
         console.error('Error creating user:', errorCode, errorMessage, 'Please try again later.');
-        return false;
+        return errorMessage;
     }
   } 
 

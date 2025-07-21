@@ -101,3 +101,7 @@ margin-bottom: 10px;
     width: 42vw;
     height: 30vh;
 }
+
+.error {
+    color: red;
+}

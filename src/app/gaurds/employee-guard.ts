@@ -25,6 +25,6 @@ export class EmployeeGuard implements CanActivate{
     
     if (userRole == 'employee') {
       return true;
-    } else return false;
+    } else return this.router.navigate(['/']);
   }
 }

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { MessageModule } from 'primeng/message';
 import { FirebaseService } from '../../services/firebase.services';
 import { Router } from '@angular/router';
-import { NotificationService } from '../../services/notification.service';
+import { CommonModule } from '@angular/common';
+import { MessageModule } from 'primeng/message';
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, InputTextModule, MessageModule],
+  imports: [ReactiveFormsModule, InputTextModule, MessageModule, CommonModule],
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -16,8 +16,8 @@ export class LoginComponent {
 constructor(
   private router: Router,
   private authService: FirebaseService,
-  private notificationService: NotificationService
 ){}
+errorMessage: string = '';
 
 loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -33,13 +33,12 @@ async onSubmit(): Promise<any> {
   const userPassword = await this.loginForm.get('password')?.value;
 
   if(!userEmail || !userPassword){
-    this.notificationService.show('Please provide a valid email and password', 'error');
     return;
   }
 
 
     const successfulLogIn = await this.authService.logIn(userEmail, userPassword);
-    if(successfulLogIn){
+    if(successfulLogIn === true){
       const userRole = await this.authService.getUserRole();
       if(userRole == 'admin') {
         this.router.navigate(['/']);
@@ -49,6 +48,7 @@ async onSubmit(): Promise<any> {
       
 
     } else {
+      this.errorMessage = String(successfulLogIn);
       return;
     } 
   }
