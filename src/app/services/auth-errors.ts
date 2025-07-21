@@ -29,6 +29,6 @@ export const AUTH_ERROR_MESSAGES: {[key: string]: string} = {
     // Add more as needed...
 
     // Fallback
-    default: 'An unknown error occurred. Please try again.'
+    'default': 'An unknown error occurred. Please try again.'
   };
 
