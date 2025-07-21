@@ -35,7 +35,7 @@ export class CreateUser {
     const successfulCreation = await this.firebaseService.createUser(email, password);
 
     if(successfulCreation) {
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
     } else {
       console.error('failed to create account');
       this.notificationService.show('Failed to create account', 'error');

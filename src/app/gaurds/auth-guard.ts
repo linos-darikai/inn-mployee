@@ -1,6 +1,6 @@
-import { CanActivate, Route, Router } from "@angular/router";
+import { CanActivate } from "@angular/router";
 import { Injectable } from "@angular/core";
-import { FirebaseService } from "./firebase.services";
+import { FirebaseService } from "../services/firebase.services";
 
 
 @Injectable({
@@ -9,7 +9,6 @@ import { FirebaseService } from "./firebase.services";
 export class AuthGuard implements CanActivate{
   constructor(
     private authService: FirebaseService,
-    private router: Router
   ){}
 
   async canActivate(): Promise<boolean> {
@@ -18,7 +17,6 @@ export class AuthGuard implements CanActivate{
     if(user) {
       return true;
     } else {
-      this.router.navigate(['/login']);
       return false;
     }
   }

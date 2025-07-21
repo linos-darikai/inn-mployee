@@ -85,13 +85,28 @@ export class FirebaseService {
     }
   }
 
-  async getUserData(uid: string): Promise<Users | null> {
-    const userDocRef = await doc(this.firestore, 'users', uid);
-    const userDocSnap = await getDoc(userDocRef);
-    if(userDocSnap.exists()){
-            return userDocSnap.data() as Users;
-        } else {
-            return null;
-        }
+  async getUserData(): Promise<Users | null> {
+    const uid = await this.getCurrentUser()?.uid;
+    if(uid) {
+      const userDocRef = await doc(this.firestore, 'users', uid);
+      const userDocSnap = await getDoc(userDocRef);
+      if(userDocSnap.exists()){
+              return userDocSnap.data() as Users;
+          } else {
+              return null;
+          }
+    } else {
+      return null;
     }
+  }
+
+  async getUserRole(): Promise<string | null> {
+    const user = await this.getUserData();
+    if(user) {
+      return String(user.role);
+    } else {
+      return null;
+    }
+  }
+
 }

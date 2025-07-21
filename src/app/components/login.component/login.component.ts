@@ -40,7 +40,14 @@ async onSubmit(): Promise<any> {
 
     const successfulLogIn = await this.authService.logIn(userEmail, userPassword);
     if(successfulLogIn){
-      return this.router.navigate(['/']);
+      const userRole = await this.authService.getUserRole();
+      if(userRole == 'admin') {
+        this.router.navigate(['/']);
+      } else {
+        this.router.navigate(['/dashboard']);
+      }
+      
+
     } else {
       return;
     } 
