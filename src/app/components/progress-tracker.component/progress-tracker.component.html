@@ -1,11 +1,9 @@
 <div class="tracker">
-    <mat-vertical-stepper class="custom-stepper" [linear]="false">
-        <mat-step *ngFor="let section of sections" [label]="section.label">
+    <mat-vertical-stepper class="custom-stepper" (selectionChange)="onStepChange($event)" [linear]="false">
+        <mat-step class="" *ngFor="let section of sections" [label]="section.label">
             <!-- If there are subsections, show a nested stepper -->
-            <mat-vertical-stepper *ngIf="section.subsections" [linear]="false">
-            <mat-step *ngFor="let sub of section.subsections" [label]="sub.label">
-                <p>Subsection: {{ sub.label }}</p>
-            </mat-step>
+            <mat-vertical-stepper (selectionChange)="onStepChangeChild($event)"*ngIf="section.subsections" [linear]="false">
+                <mat-step class="subsection-text" *ngFor="let sub of section.subsections" [label]="sub.label">            </mat-step>
             </mat-vertical-stepper>
 
         </mat-step>
