@@ -8,8 +8,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { StepperSelectionEvent } from '@angular/cdk/stepper';
-
-
 @Component({
   selector: 'app-progress-tracker',
   imports: [MatButtonModule, MatInputModule,  MatFormFieldModule, MatStepperModule, ReactiveFormsModule, CommonModule],
@@ -18,12 +16,26 @@ import { StepperSelectionEvent } from '@angular/cdk/stepper';
 
 })
 export class ProgressTrackerComponent {
+
+  onStepChange(event: StepperSelectionEvent) {
+    console.log('Clicked step index:', event.selectedIndex + 1);
+    console.log('Previously selected step index:', event.previouslySelectedIndex + 1);
+  }
+
+  onStepChangeChild(event: StepperSelectionEvent) {
+    console.log('Clicked step index:', event.selectedIndex + 1/ 10);
+    console.log('Previously selected step index:', event.previouslySelectedIndex + 1/ 10);
+  }
+
   
   //**This is how sections should look like */
   sections = [
     {
       label: 'Personal Info',
-      subsections: null,
+      subsections:  [
+        { label: 'ID Upload' },
+        { label: 'Proof of Address' }
+      ],
     },
     {
       label: 'Documents',
@@ -41,3 +53,5 @@ export class ProgressTrackerComponent {
     }
   ];
 }
+
+
