@@ -1,0 +1,33 @@
+
+<h2 class="head-text">HR Onboarding Platform</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-layout gap-4 w-full sm:w-56">
+    <div class="input-field flex  gap-36  text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
+       <span class="pi pi-user"></span>
+       <input pInputText class="input-bar" type="email" id="email" placeholder="Email" formControlName="email" [invalid]="isInvalid('email')" style="width: 80%;"/>
+    </div>
+     @if (isInvalid('email')) {
+         @if (loginForm.get('email')?.errors?.['required']) {
+            <p-message severity="error" size="small" variant="simple" class="error" >Email is required</p-message>
+         }
+         @if (loginForm.get('email')?.errors?.['email']) {
+            <p-message severity="error" size="small" variant="simple" class="error" >Please enter a valid email address</p-message>
+         }
+         
+       } 
+    
+    <div class="input-field flex gap-1 text-gray-500 text-left px-3 py-2 border border-gray-300 rounded w-full">
+       <span class="pi pi-lock"></span>
+       <input pInputText type="password" id="password" placeholder="Password" formControlName="password" [invalid]="isInvalid('password')" style="width: 80%;" />
+    </div>
+    @if (isInvalid('password') && loginForm.get('password')?.errors?.['required']){
+         <p-message severity="error" class="error" size="small" variant="simple">Password is required</p-message>
+       }
+      @if (errorMessage !== '') {
+         <p-message severity="error" class="error" size="small" variant="simple"> {{errorMessage}}</p-message>
+      }
+    <div class=login-buttons>
+      <button pButton class="loginB" severity="secondary" type="submit"><span pButtonLabel>Submit</span></button>
+      <button rButton class="resetB"  type="button"><span pButtonLabel>Reset Your Password</span></button>
+    </div>
+    
+</form>

@@ -1,0 +1,8 @@
+<h1>CREATE USER FORM</h1>
+<h2>Temporary</h2>
+
+<form [formGroup]="createUserForm" (ngSubmit)="onSumbit()">
+    <input type="email" formControlName="email"/>
+    <input type="password" formControlName="password"/>
+    <button type="submit">Create User</button>
+</form>

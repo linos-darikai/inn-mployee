@@ -1,0 +1,107 @@
+
+/*Need for mobile optimisation*/
+.head-text{
+    display: flex;
+width: 40.2vw;
+height: 1vh;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 800;
+line-height: 20px; /* 31.25% */
+letter-spacing: 0.1px;
+margin-bottom: 30px ;
+margin-left: 30vw;
+}
+.login-layout{
+    display: grid;
+    grid-template-areas: 
+    "input-field"
+    "input-field"
+    "buttons"
+    ;
+    gap: 10px;
+    
+}
+.input-field{
+border-radius: 8px;
+border: 1px solid var(--Gray-300, #D5D7DA);
+background: var(--White, #FFF);
+width: 42vw;
+
+/* Shadow/xs */
+box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+display: flex;
+padding: 10px 14px;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+grid-area: "input-field";
+margin-bottom: 10px;
+}
+
+.login-buttons{
+    display: grid;
+    grid-area: "buttons";
+  
+    grid-template-areas: "loginB resetB"; 
+}
+
+.loginB{
+    border-radius: 20px;
+    border: 2px solid #008000;
+    background: #FFF;
+    width: 140px;
+    height: 50px;
+    color: var(--M3-sys-light-on-surface, var(--Schemes-On-Surface, #1D1B20));
+    text-align: center;
+    font-family: Inter;
+    font-size: var(--Static-Label-Large-Size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Static-Label-Large-Line-Height, 20px); /* 142.857% */
+    letter-spacing: var(--Static-Label-Large-Tracking, 0.1px);
+    grid-area: "loginB";
+}
+.resetB{
+   border-radius: 20px;
+    border: 2px solid #F00;
+    background: #FFF; 
+    width: 140px;
+    height: 50px;
+    color: var(--M3-sys-light-on-surface, var(--Schemes-On-Surface, #1D1B20));
+    text-align: center;
+    font-family: Inter;
+    font-size: var(--Static-Label-Large-Size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Static-Label-Large-Line-Height, 20px); /* 142.857% */
+    letter-spacing: var(--Static-Label-Large-Tracking, 0.1px);
+    grid-area: "resetB";
+}
+
+
+.resetB:active{
+    background-color:#F00 ;
+    transform: scale(0.95);
+}
+
+.loginB:active{
+    background-color:#008000 ;
+    transform: scale(0.95);
+}
+
+.form-layout{
+    margin-left: 29vw;
+    width: 42vw;
+    height: 30vh;
+}
+
+.error {
+    color: red;
+}

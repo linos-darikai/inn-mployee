@@ -1,0 +1,51 @@
+
+
+/* Table wrapper: scrollable with fixed dimensions */
+.table-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* ✅ Horizontally center the table */
+  height: 250px;   /* ✅ Required for sticky headers to work */
+  overflow-y: auto; 
+  border-radius: 8px;
+}
+/* Table styling */
+mat-table.custom-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  justify-self: center;
+}
+
+/* Remove lines and align text */
+.mat-mdc-row, .mat-mdc-cell {
+  background-color: white;
+    padding: 3px;
+    height: 3vh;
+    border: none !important;
+    text-align: center;
+}
+.mat-mdc-header-cell, .mat-mdc-header-row {
+  background-color: white;
+    height: 3vh;
+  font-weight: bold;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  z-index: 1;
+}
+
+/* Color coding for status */
+.todo {
+  background-color: #ffe5e5 !important;
+  color: #c62828;
+}
+.started {
+  background-color: #fff4e5 !important;
+  color: #ef6c00;
+}
+.done {
+  background-color: #e8f5e9 !important;
+  color: #2e7d32;
+}
+

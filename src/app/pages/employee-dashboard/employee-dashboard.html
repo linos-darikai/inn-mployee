@@ -1,0 +1,50 @@
+<!-- Main Content will sit here-->
+ <app-side-nav-bar>
+    <div class="dashboard-wrapper">
+    
+    <div class="title-wrapper">
+        <span>
+            <h1> Welcome {{user.name}}! </h1>
+        </span>
+        <div class="searchbar-wrapper">
+            <app-searchbar></app-searchbar>
+        </div>
+        
+    </div>
+    <div class="countdown-wrapper container">
+        <span>
+            <h1>You're onboarding requirements are due in</h1>
+        </span>
+        <div class="countdown">
+            <app-countdown></app-countdown>
+        </div>
+        
+    </div>
+    <div class="chart container">
+        <span>
+            <h1>
+                Onboarding Pogress:
+            </h1>
+        </span>
+        <app-employee-progress-chart>
+            
+        </app-employee-progress-chart>
+
+
+    </div>
+    <div class="todo-list container">
+        <span>
+            <h1>Tasks:</h1>
+        </span>
+        <app-employee-todo-list></app-employee-todo-list>
+    </div>
+    <div class="continue-container">
+        <button matFab extended class="continue">
+            Continue
+            <mat-icon style="color: #2DBA95">arrow_forward</mat-icon>
+        </button>
+    </div>
+    
+
+    </div>
+ </app-side-nav-bar>

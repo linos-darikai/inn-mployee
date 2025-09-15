@@ -1,0 +1,74 @@
+.dashboard-wrapper {
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-wrapper span h1 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.title-wrapper span {
+    width: 80%;
+}
+.searchbar-wrapper {
+    width: 20%;
+    align-items: center;
+}
+.todo-list {
+    flex-direction: column;
+    align-items: center;
+}
+.chart {
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1{
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.countdown-wrapper span {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    padding: 0.5vh;
+}
+
+.countdown {
+    width: 100%;
+    padding: 0.5vh;
+}
+
+.continue {
+    background-color: transparent;
+    border-color: #2DBA95;
+    color: #2DBA95;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.coninue-container {
+    align-items: right;
+}

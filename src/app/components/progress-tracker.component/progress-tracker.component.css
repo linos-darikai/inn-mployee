@@ -1,0 +1,42 @@
+.tracker{
+    width: 20vw;
+    height: 96vh;
+    background-color: #fff;
+}
+/*::ng-deep .mat-vertical-stepper-header {
+    display: flex;
+    align-items: center;
+    height: 5px;
+    padding: calc((var(--mat-stepper-header-height, 72px) - 24px) / 2) 24px;
+}*/
+
+::ng-deep .mat-step-header-completed{
+    display: none;
+}
+::ng-deep .mat-step-icon-state-edit{
+    color:#172949;
+}
+
+
+::ng-deep .subsection-text .mat-step-label .mat-step-text-label{
+    font-size: smaller;
+}
+
+::ng-deep .mat-stepper-vertical, .mat-stepper-horizontal {
+   background: #fff;
+}
+
+::ng-deep .mat-vertical-stepper-header {
+    height: 2vh !important;
+    padding: 15px !important;
+}
+
+
+
+:host ::ng-deep .mat-step-icon{
+    background-color: #172949;
+    width: 14px;
+    height: 14px;
+    font-size: 0.8rem;
+    line-height: 40px;
+}

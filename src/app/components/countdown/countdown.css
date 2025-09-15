@@ -1,0 +1,44 @@
+.card-wrapper {
+    display: flex;
+    height: 10vh;
+}
+
+.card-row {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.countdown-card { 
+  padding: 0.25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* use this instead of align-content */
+  text-align: center;
+  width: 25%;
+  height: 100%;
+
+}
+
+/* Move this outside */
+.countdown-card .text-holder {
+  font-weight: lighter;
+  font-size: small;
+}
+
+.countdown-card span {
+    border-radius: 5px 5px 5px 5px;
+    height: 60%;
+    width: 90%;
+    background-color: #F2F2F5;
+    text-align: center;
+    justify-content: center;    
+    align-content: center;
+    font-weight: 350;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+
+
